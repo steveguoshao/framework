@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+    
+	<description>常用标签库</description>
+	<tlib-version>1.1</tlib-version>
+	<jsp-version>2.0</jsp-version>
+	<short-name>mvc</short-name>
+	<!-- 标签库地址，如果这写这个，JSP页面上用逻辑路径指定也可以找到 -->
+	<uri>http://www.shaoshuai.io/mvc</uri>
+	<tag>
+		<!-- 标签名 -->
+		<name>page</name>
+		<!-- 实现类 -->
+		<tag-class>io.shaoshuai.framework.mvc.page.PageTag</tag-class>
+		
+		<!-- 参数：是否输出页数信息，默认为输出 -->
+		<attribute>
+			<name>pageSize</name>
+			<rtexprvalue>false</rtexprvalue>
+			<type>int</type>
+		</attribute>
+		
+		<!-- 参数：是否输出页数信息，默认为输出 -->
+		<attribute>
+			<name>totalAccount</name>
+			<rtexprvalue>false</rtexprvalue>
+			<type>boolean</type>
+		</attribute>
+		
+		<!-- 参数：是否输出总记录信息，默认为输出 -->
+		<attribute>
+			<name>pageAccount</name>
+			<rtexprvalue>false</rtexprvalue>
+			<type>boolean</type>
+		</attribute>
+		
+		<!-- 参数：当前页码的显示样式，如果不指定，将按默认值 -->
+		<attribute>
+			<name>curPageNumberStyle</name>
+			<rtexprvalue>false</rtexprvalue>
+			<type>String</type>
+		</attribute>
+		
+		<!-- 参数：带链接的页码的显示样式，如果不指定，将按默认值 -->
+		<attribute>
+			<name>linkPageNumberStyle</name>
+			<rtexprvalue>false</rtexprvalue>
+			<type>String</type>
+		</attribute>
+	</tag>
+	
+</taglib>

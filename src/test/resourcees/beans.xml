@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+	<bean id="queryRunner" class="io.shaoshuai.framework.ioc.test.QueryRunner"></bean>
+
+	<bean id="accountDao" class="io.shaoshuai.framework.ioc.test.AccountDaoImpl">
+		<property name="queryRunner" ref="queryRunner"></property>
+	</bean>
+
+	<bean id="authenticationService" class="io.shaoshuai.framework.ioc.test.AuthenticationServiceImpl">
+		<property name="accountDao" ref="accountDao"></property>
+	</bean>
+	
+	<bean id="loginController" class="io.shaoshuai.framework.ioc.test.LoginController">
+		<property name="authenticationService" ref="authenticationService"></property>
+	</bean>
+	
+	<bean id="ioCControllerFactory" class="io.shaoshuai.framework.ioc.test.IoCControllerFactory" scope="singleton"></bean>
+</beans>

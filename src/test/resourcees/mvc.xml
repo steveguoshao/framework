@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mvc>
+	<controller name="/loginController" class="io.shaoshuai.web.controller.LoginController">
+		<mapping name="toLogin" type="redirect">/pages/login.jsp</mapping>
+		<mapping name="success" type="redirect">/pages/index.jsp</mapping>
+		<mapping name="autoLogin" type="redirect">/pages/autoLogin.jsp</mapping>
+		<mapping name="failure" type="forward">/pages/login.jsp</mapping>
+	</controller>
+	<controller name="/userController" class="io.shaoshuai.web.controller.UserController">
+		<mapping name="list" type="forward">/pages/list.jsp</mapping>
+		<mapping name="add"  type="redirect">/pages/add.jsp</mapping>
+		<mapping name="edit" type="redirect">/pages/edit.jsp</mapping>
+		<mapping name="view" type="redirect">/pages/view.jsp</mapping>
+	</controller>
+</mvc>
